@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAKA,IAAI;EACF,IAAI,EAJM,qBAAqB;EAK/B,KAAK,EAJM,OAAO",
+"mappings": "AAIA,CAAC;EACC,WAAW,EAJD,qBAAqB;EAK/B,KAAK,EAJM,OAAO",
 "sources": ["main.sass"],
 "names": [],
 "file": "output.css"

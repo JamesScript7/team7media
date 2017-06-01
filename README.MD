@@ -1,5 +1,5 @@
 # Hello team members of team7media!
-I've created this git repo to showcase some of my HTML5/CSS3 skills and also wrote up an overview of SASS to help me refresh my memory.
+I've created this git repo to showcase some of my HTML5/CSS3 skills and also wrote up an overview of SASS as a refresher and help me with retention.
 
 The transition from CSS to SASS is fairly simple as it carries out to solve repetition and flexibility through a programmatic approach. It's a little bit of ruby, python and javascript!
 
@@ -9,13 +9,13 @@ I will be writing in SASS syntax instead of SCSS. The difference is minor and ea
 1. install sass on the command line.
 
 ```
-  sudo gem install sass
+sudo gem install sass
 ```
 
 2. Check the version to confirm.
 
 ```
-  sass -v
+sass -v
 ```
 
 Should return:
@@ -49,38 +49,38 @@ This follows the DRY principles. Less typing = less time = more ads = more money
 The CSS way:
 
 ```
-  nav ul {
-    padding: 5px;
-  }
+nav ul {
+  padding: 5px;
+}
 
-  nav li {
-    display: inline-block;
-  }
+nav li {
+  display: inline-block;
+}
 ```
 
 The SASS way:
 
 ```
-  nav
-    ul
-      padding: 5px
+nav
+  ul
+    padding: 5px
 
-    li
-      display: inline-block
+  li
+    display: inline-block
 ```
 
 Also any properties that have hyphenates prefixes can be nested as so:
 
 ```
-  .header
-    .menu
-      .items
-        font:
-          weight: bold
-          size: $variable + 2px
-        background:
-          position: fixed
-          color: #151515
+.header
+  .menu
+    .items
+      font:
+        weight: bold
+        size: $variable + 2px
+      background:
+        position: fixed
+        color: #151515
 ```
 
 ### Partials
@@ -88,7 +88,7 @@ Also any properties that have hyphenates prefixes can be nested as so:
 These are chopped up pieces of a CSS file, mainly for re-usability. This modularizes the file so it can be used on different files. Place an underscore preceding the file name of the partial like so to let the file know it shouldn't be generated into the CSS file:
 
 ```
-  _partial_blue_design.sass
+_partial_blue_design.sass
 ```
 
 ### Import
@@ -97,7 +97,7 @@ This is how we bring the partials into the current CSS file. When we import we c
 We have to remember that when we use \@import, it creates another HTTP request. SASS knows to drop the leading underscore and file extension.
 
 ```
-  @import partial_blue_design
+@import partial_blue_design
 ```
 
 ### Mixins
@@ -108,10 +108,10 @@ You have the ability to pass in an argument between the parenthesis. The benefit
 * You can set the default argument. For example:
 
 ```
-  =border-radius($radius: 3px)
-    -webkit-border-radius: $radius
-    -moz-border-radius:    $radius
-    -ms-border-radius:     $radius
+=border-radius($radius: 3px)
+  -webkit-border-radius: $radius
+  -moz-border-radius:    $radius
+  -ms-border-radius:     $radius
 ```
 *note: SCSS syntax uses "\@mixin" where as SASS uses "="*
 
@@ -120,8 +120,8 @@ You have the ability to pass in an argument between the parenthesis. The benefit
 this brings in the mixin you created
 
 ```
-  .box
-    +border-radius(5px)
+.box
+  +border-radius(5px)
 ```
 *note: SCSS syntax uses "\@include" where as the SASS uses "+"*
 
@@ -132,13 +132,13 @@ So if you give an argument, it will use that. If you leave off the (5px) then it
 This allows you to bring over the set of CSS properties.
 
 ```
-  .test
-    width: 80%
-    margin: 0 auto
+.test
+  width: 80%
+  margin: 0 auto
 
-  .new
-    @extend .test
-    border-color: yellow
+.new
+  @extend .test
+  border-color: yellow
 ```
 
 ### Operators
@@ -146,9 +146,9 @@ This allows you to bring over the set of CSS properties.
 Basically you can use math operators to create dynamic sizing based on a set window size. Lets say for any reason, you need to convert pixel value to a percentage:
 
 ```
-  .content-one
-    width: 400 / 1000 * 100%
+.content-one
+  width: 400 / 1000 * 100%
 
-  .content-two
-    width: 600 / 1000 * 100%
+.content-two
+  width: 600 / 1000 * 100%
 ```
