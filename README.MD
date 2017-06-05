@@ -30,6 +30,18 @@ Sass 3.4.22 (Selective Steve)
 sass main.sass output.css
 ```
 
+4. Watch it so that SASS will update every time the SASS file detects a change:
+
+watch a single file:
+```
+sass --watch input.sass:output.css
+```
+
+watch a directory:
+```
+sass --watch app/sass:public/stylesheets
+```
+
 ## The Important Stuff:
 
 1. SASS drops the curly brackets and semi-colons!
@@ -151,4 +163,29 @@ Basically you can use math operators to create dynamic sizing based on a set win
 
 .content-two
   width: 600 / 1000 * 100%
+```
+
+### Loops
+
+This is an each-loop that is similar to a for in loop
+
+```
+$list: (orange, purple, teal)
+
+@each $item in $list
+  .#($item)
+  background: $item;
+```
+
+This is a for-loop
+
+*note: You can use "through" or "to" keywords*
+
+```
+$total: 10
+$step: 360deg / $total
+
+@for $i from $begin through $end
+  .wheel:nth-child(#{$i})
+  background: adjust-hue(blue, $i * $step);
 ```
