@@ -18,7 +18,7 @@ sudo gem install sass
 sass -v
 ```
 
-Should return:
+As of June 05, 2017, should return:
 
 ```
 Sass 3.4.22 (Selective Steve)
@@ -31,6 +31,7 @@ sass main.sass output.css
 ```
 
 4. Watch it so that SASS will update every time the SASS file detects a change:
+
 
 watch a single file:
 ```
@@ -46,6 +47,7 @@ sass --watch app/sass:public/stylesheets
 
 1. SASS drops the curly brackets and semi-colons!
 2. It also uses two-space indentations for code nesting.
+3. SCSS and SASS are easily convertible to CSS.
 
 ### Variables
 
@@ -53,6 +55,7 @@ Re-using code is very efficient and bring CSS closer to programmatic thinking.
 
 * The "$" symbol creates a variable
 * Insert the variable as a value for the property
+* Using functions and loops!
 
 ### Nesting
 
@@ -174,7 +177,7 @@ $list: (orange, purple, teal)
 
 @each $item in $list
   .#($item)
-  background: $item;
+  background: $item
 ```
 
 This is a for-loop
@@ -187,5 +190,5 @@ $step: 360deg / $total
 
 @for $i from $begin through $end
   .wheel:nth-child(#{$i})
-  background: adjust-hue(blue, $i * $step);
+  background: adjust-hue(blue, $i * $step)
 ```
