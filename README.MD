@@ -1,21 +1,21 @@
-## Intro to Sass!
+# Intro to Sass!
 A simple overview of Sass.
 
 The transition to Sass from CSS is relatively simple. It carries out to solve repetition and add flexibility.
 
-I will be writing in SASS syntax instead of SCSS. The difference is minor and easy to convert.
+I will be writing in Sass syntax instead of SCSS. The difference is minor and easy to convert.
 
-## Getting set up with SASS:
-1. install sass on the command line.
+## Getting set up with Sass:
+1. install Sass on the command line.
 
 ```
-sudo gem install sass
+sudo gem install Sass
 ```
 
 2. Check the version to confirm.
 
 ```
-sass -v
+Sass -v
 ```
 
 As of June 05, 2017, should return:
@@ -27,27 +27,27 @@ Sass 3.4.22 (Selective Steve)
 3. Enter the styles directory and run:
 
 ```
-sass main.sass output.css
+Sass main.sass output.css
 ```
 
-4. Watch it so that SASS will update every time the SASS file detects a change:
+4. Watch it so that Sass will update every time the Sass file detects a change:
 
 
 watch a single file:
 ```
-sass --watch input.sass:output.css
+Sass --watch input.sass:output.css
 ```
 
 watch a directory:
 ```
-sass --watch app/sass:public/stylesheets
+Sass --watch app/sass:public/stylesheets
 ```
 
 ## The Important Stuff:
 
-1. SASS drops the curly brackets and semi-colons!
+1. Sass drops the curly brackets and semi-colons!
 2. It also uses two-space indentations for code nesting.
-3. SCSS and SASS are easily convertible to CSS.
+3. SCSS and Sass are easily convertible to CSS.
 
 ### Variables
 
@@ -73,7 +73,7 @@ nav li {
 }
 ```
 
-The SASS way:
+The Sass way:
 
 ```
 nav
@@ -103,13 +103,13 @@ Also any properties that have hyphenates prefixes can be nested as so:
 These are chopped up pieces of a CSS file, mainly for re-usability. This modularizes the file so it can be used on different files. Place an underscore preceding the file name of the partial like so to let the file know it shouldn't be generated into the CSS file:
 
 ```
-_partial_blue_design.sass
+_partial_blue_design.Sass
 ```
 
 ### Import
 
 This is how we bring the partials into the current CSS file. When we import we can build on top of the current CSS file.
-We have to remember that when we use \@import, it creates another HTTP request. SASS knows to drop the leading underscore and file extension.
+We have to remember that when we use \@import, it creates another HTTP request. Sass knows to drop the leading underscore and file extension.
 
 ```
 @import partial_blue_design
@@ -128,7 +128,7 @@ You have the ability to pass in an argument between the parenthesis. The benefit
   -moz-border-radius:    $radius
   -ms-border-radius:     $radius
 ```
-*note: SCSS syntax uses "\@mixin" where as SASS uses "="*
+*note: SCSS syntax uses "\@mixin" where as Sass uses "="*
 
 ### Include
 
@@ -138,7 +138,7 @@ this brings in the mixin you created
 .box
   +border-radius(5px)
 ```
-*note: SCSS syntax uses "\@include" where as the SASS uses "+"*
+*note: SCSS syntax uses "\@include" where as the Sass uses "+"*
 
 So if you give an argument, it will use that. If you leave off the (5px) then it will use the default value specified in the creation of the mixin.
 
