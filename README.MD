@@ -59,7 +59,7 @@ Re-using code is very efficient and bring CSS closer to programmatic thinking.
 
 ### Nesting
 
-This follows the DRY principles. Less typing = less time = more ads = more money in your pocket!
+This follows the DRY principle.
 
 The CSS way:
 
