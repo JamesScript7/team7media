@@ -9,13 +9,13 @@ I will be writing in Sass syntax instead of SCSS. The difference is minor and ea
 1. install Sass on the command line.
 
 ```
-sudo gem install Sass
+sudo gem install sass
 ```
 
 2. Check the version to confirm.
 
 ```
-Sass -v
+sass -v
 ```
 
 As of June 05, 2017, should return:
@@ -27,7 +27,7 @@ Sass 3.4.22 (Selective Steve)
 3. Enter the styles directory and run:
 
 ```
-Sass main.sass output.css
+sass main.sass output.css
 ```
 
 4. Watch it so that Sass will update every time the Sass file detects a change:
@@ -35,12 +35,12 @@ Sass main.sass output.css
 
 watch a single file:
 ```
-Sass --watch input.sass:output.css
+sass --watch input.sass:output.css
 ```
 
 watch a directory:
 ```
-Sass --watch app/sass:public/stylesheets
+sass --watch app/sass:public/stylesheets
 ```
 
 ## The Important Stuff:
