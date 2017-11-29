@@ -1,7 +1,7 @@
-# Hello team members of team7media!
-I've created this git repo to showcase some of my HTML5/CSS3 skills and also wrote up an overview of SASS as a refresher and help me with retention.
+## Intro to Sass!
+A simple overview of Sass.
 
-The transition from CSS to SASS is fairly simple as it carries out to solve repetition and flexibility through a programmatic approach. It's a little bit of ruby, python and javascript!
+The transition to Sass from CSS is relatively simple. It carries out to solve repetition and add flexibility.
 
 I will be writing in SASS syntax instead of SCSS. The difference is minor and easy to convert.
 
